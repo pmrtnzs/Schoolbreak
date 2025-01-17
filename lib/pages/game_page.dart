@@ -87,7 +87,7 @@ class GamePageState extends State <GamePage> with SingleTickerProviderStateMixin
     });
     await _playVideo(); //Situation video starts playing
     await _opacityController.forward(); //Opacity is reduced to 0.3
-    // _videoController.pause();
+    _videoController.pause();
     setState(() {
       showTextAndButtons = true; //Prompt and options are shown
       showSkip = false;

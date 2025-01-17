@@ -30,7 +30,8 @@ class IntroPageState extends State<IntroPage> {
     } catch (e) {
       debugPrint("Error initializing video player: $e");
     }
-    introDuration = _introController.value.duration;
+    introDuration = _introController.value.duration * 0.6667;
+    _introController.setPlaybackSpeed(1.5);
     await playIntro();
     
     //Loop intro
