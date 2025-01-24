@@ -34,7 +34,7 @@ However, I encountered a limitation with Flutter's video_player package. As spec
    
 This causes an unexpected black background after a video finishes playing for the first time, if page reloaded, this doesn't happen as the video is in the browser's cache. For this reason and demonstration purposes, the ideal performance occurs on **debug mode**, having all videos played once before. This behaviour is most evident when the **Skip** button is used, as it has an explicit **.seekTo()** operation. However, it may happen non-deterministically as the **.play()** method has a **.seekTo()** in its definition (see line 555 in https://github.com/flutter/packages/blob/main/packages/video_player/video_player/lib/video_player.dart). 
 
-## Running on Andhttps://lucid.app/lucidchart/a7a03e8c-aeab-4816-b5f3-2ead3167ed25/edit?from_internal=trueroid
+## Running on Android
 
 # Run the App on emulator:
 1. Install Android Studio:
