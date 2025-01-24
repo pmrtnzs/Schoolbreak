@@ -34,8 +34,30 @@ However, I encountered a limitation with Flutter's video_player package. As spec
    
 This causes an unexpected black background after a video finishes playing for the first time, if page reloaded, this doesn't happen as the video is in the browser's cache. For this reason and demonstration purposes, the ideal performance occurs on **debug mode**, having all videos played once before. This behaviour is most evident when the **Skip** button is used, as it has an explicit **.seekTo()** operation. However, it may happen non-deterministically as the **.play()** method has a **.seekTo()** in its definition (see line 555 in https://github.com/flutter/packages/blob/main/packages/video_player/video_player/lib/video_player.dart). 
 
-## Running on Android
+## Running on Andhttps://lucid.app/lucidchart/a7a03e8c-aeab-4816-b5f3-2ead3167ed25/edit?from_internal=trueroid
 
-- Run the App on emulator:
-   - flutter run -d android_device 
-    
+# Run the App on emulator:
+1. Install Android Studio:
+ - Download and install Android Studio.
+ - Open Android Studio and go to Tools > SDK Manager.
+ - Ensure the necessary SDK platforms and tools are installed.
+
+2. Create an Emulator:
+ - In Android Studio, go to Tools > Device Manager.
+ - Click Create Device and select a device profile (e.g., Pixel 6).
+ - Choose a system image (e.g., Android 13 with Google APIs) and download it if necessary.
+ - Finish the setup and start the emulator.
+
+3. Run the app:
+ - flutter run -d android_device 
+
+# Create .apk
+ - Execute 'flutter build apk --release' in cmd.
+ - Find in 'build\app\outputs\flutter-apk\app-release.apk'.
+
+# Create App bundle for release
+ - Execute 'flutter build appbundle --release' in cmd.
+ - Find in 'build\app\outputs\bundle\release\app-release.aab'.  
+
+ For minimal space consumption, no builds were inside the submitted foler. Thess instructions should make them.
+
